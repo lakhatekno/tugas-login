@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Goudy Old Style', sans-serif;
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, rgb(20, 3, 79), rgb(23, 5, 5));
+}
+
+main {
+  /* background: url('src/pexels-francesco-ungaro-998641.jpg'); */
+  background-blend-mode: screen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#rocket {
+  position: absolute;
+  width: 280px;
+  z-index: -1;
+  opacity: .3;
+  animation: updown 2.5s infinite;
+}
+
+@keyframes updown {
+  0% {
+    top: 15%;
+  }
+  50% {
+    top: 20%;
+  }
+
+  100% {
+    top: 15%;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+.login {
+  border: 2px solid rgb(251, 255, 243);
+  position: inherit;
+  color: rgb(251, 255, 243);
+  background-image: linear-gradient(to right bottom, rgba(16, 3, 93, 0.3), rgba(255, 174, 174, 0.234));
+  border-radius: 10px;
+  padding: 2rem;
+  width: 18rem;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+form {
+  margin: 1rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  border: 1px solid white;
+  border-radius: .5rem;
+  padding: 5px 11px;
+  background-color: transparent;
+  font-size: .8rem;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+input::placeholder {
+  color: rgba(209, 209, 209, 0.415);
+}
+
+button[type="submit"] {
+  color: rgb(251, 255, 243);
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+}
+
+button[type="submit"]:hover {
+  cursor: pointer;
+  color: rgb(62, 62, 62);;
+  background-color: rgba(255, 255, 255, 1);
+  transition: .1s all;
+}
+
+.password {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#passw {
+  border-radius: .5rem 0 0 .5rem;
+}
+
+#eye {
+  color: rgb(50, 50, 50);
+  background-color: white;
+  border-radius: 0 .5rem .5rem 0;
+  padding: 2.5px;
+  border: 1px solid white;
+  display: flex;
+}
+
+#eye:hover {
+  cursor: pointer;
+}
